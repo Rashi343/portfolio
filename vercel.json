@@ -4,6 +4,18 @@
     {
       "src": "api/index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -20,8 +32,8 @@
       "dest": "/login.html"
     },
     {
-      "src": "/(.*\\.(css|js|html|png|jpg|jpeg|gif|svg|ico))",
-      "dest": "/$1"
+      "src": "/(css|js)/(.*)",
+      "dest": "/$1/$2"
     },
     {
       "src": "/",
