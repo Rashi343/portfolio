@@ -111,7 +111,8 @@
             const errorMsg = document.getElementById('error-msg');
             
             try {
-                const response = await fetch('/api/login', {
+                const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api/login' : '/api/login';
+                const response = await fetch(apiUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password })
@@ -123,11 +124,12 @@
                     localStorage.setItem('adminToken', data.token);
                     window.location.href = '/admin';
                 } else {
-                    errorMsg.textContent = 'Invalid email or password';
+                    errorMsg.textContent = data.message || 'Invalid email or password';
                     errorMsg.style.display = 'block';
                 }
             } catch (error) {
-                errorMsg.textContent = 'Login failed. Please try again.';
+                console.error('Login error:', error);
+                errorMsg.textContent = 'Login failed: ' + error.message;
                 errorMsg.style.display = 'block';
             }
         });
