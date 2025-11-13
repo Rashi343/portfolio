@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashi Dev - 3D Animated Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://placehold.co/32x32/818CF8/FFFFFF?text=RD&font=Poppins" type="image/png">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header id="main-header">
+        <nav>
+            <div class="logo">
+                <a href="#">Rashi Dev</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="portfolio-section">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Rashi Dev</span>.</h1>
+            <p class="subtitle">A Creative Developer & 3D Enthusiast</p>
+            <p class="description">I craft immersive digital experiences and bring ideas to life with code and animation.</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="portfolio-section content-card">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://placehold.co/300x300/1E293B/E0F2FE?text=Rashi&font=Poppins" alt="Rashi Dev - Profile Picture">
+            </div>
+            <div class="about-text">
+                <p>I'm a passionate and results-driven developer with a strong interest in front-end technologies, 3D graphics, and creating intuitive user interfaces. My journey in tech began with a fascination for how digital products are built, and it has grown into a full-fledged dedication to mastering the art of software development.</p>
+                <p>I thrive on challenges, continuously learn new skills, and enjoy collaborating on projects that push creative and technical boundaries. When I'm not coding, you might find me exploring new animation techniques or contributing to open-source projects.</p>
+                <a href="#contact" class="cta-button-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="portfolio-section">
+        <h2 class="section-title">My Creations</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Project+Alpha&font=Poppins" alt="Project Alpha">
+                </div>
+                <div class="project-info">
+                    <h3>Project Alpha: Interactive Data Viz</h3>
+                    <p>A web application for visualizing complex datasets with an interactive 3D interface. Built with D3.js and Three.js.</p>
+                    <div class="project-tags">
+                        <span>Three.js</span><span>D3.js</span><span>JavaScript</span>
+                    </div>
+                    <a href="#" target="_blank" class="project-link">View Project &rarr;</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Project+Beta&font=Poppins" alt="Project Beta">
+                </div>
+                <div class="project-info">
+                    <h3>Project Beta: E-commerce Platform</h3>
+                    <p>A modern e-commerce solution with a focus on user experience and a unique 3D product preview feature.</p>
+                     <div class="project-tags">
+                        <span>React</span><span>Node.js</span><span>WebGL</span>
+                    </div>
+                    <a href="#" target="_blank" class="project-link">View Project &rarr;</a>
+                </div>
+            </div>
+            <div class="project-card">
+                 <div class="project-image">
+                    <img src="https://placehold.co/600x400/EC4899/FFFFFF?text=Project+Gamma&font=Poppins" alt="Project Gamma">
+                </div>
+                <div class="project-info">
+                    <h3>Project Gamma: VR Experience</h3>
+                    <p>An immersive virtual reality game developed with A-Frame, showcasing interactive environments and physics.</p>
+                    <div class="project-tags">
+                        <span>A-Frame</span><span>VR</span><span>JavaScript</span>
+                    </div>
+                    <a href="#" target="_blank" class="project-link">View Project &rarr;</a>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="skills" class="portfolio-section content-card">
+        <h2 class="section-title">My Arsenal</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h4>Front-End</h4>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React / Vue.js</li>
+                    <li>Tailwind CSS / SASS</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Back-End</h4>
+                <ul>
+                    <li>Node.js & Express</li>
+                    <li>Python (Django/Flask)</li>
+                    <li>RESTful APIs</li>
+                    <li>GraphQL</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>3D & Graphics</h4>
+                <ul>
+                    <li>Three.js / WebGL</li>
+                    <li>Blender (Basic)</li>
+                    <li>A-Frame (WebXR)</li>
+                    <li>GLSL Shaders (Basic)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Tools & Others</h4>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>Docker</li>
+                    <li>Webpack / Vite</li>
+                    <li>Firebase / Supabase</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="portfolio-section">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-form-container content-card">
+            <p class="contact-intro">Have a project in mind, a question, or just want to say hi? Feel free to reach out!</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your detailed message..."></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+            <div id="form-status" class="form-status-message"></div>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <div class="social-links">
+            <a href="#" target="_blank" title="GitHub"><img src="https://placehold.co/24x24/CBD5E1/475569?text=Gh&font=sans" alt="GitHub"></a>
+            <a href="#" target="_blank" title="LinkedIn"><img src="https://placehold.co/24x24/CBD5E1/475569?text=Li&font=sans" alt="LinkedIn"></a>
+            <a href="#" target="_blank" title="Twitter/X"><img src="https://placehold.co/24x24/CBD5E1/475569?text=X&font=sans" alt="Twitter"></a>
+        </div>
+        <p>&copy; <span id="currentYear"></span> Rashi Dev. All rights reserved. Crafted with passion.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
