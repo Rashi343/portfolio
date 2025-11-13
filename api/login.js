@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 const crypto = require('crypto');
 
-const MONGO_URI = 'mongodb+srv://rashi:Rashi123@rashi.qn1zdi7.mongodb.net/?appName=rashi';
+const MONGO_URI = 'mongodb+srv://rashi:Rashi123@rashi.qn1zdi7.mongodb.net/portfolio?retryWrites=true&w=majority';
 
 let cachedClient = null;
 
@@ -9,7 +9,10 @@ async function connectToDatabase() {
     if (cachedClient) {
         return cachedClient;
     }
-    const client = new MongoClient(MONGO_URI);
+    const client = new MongoClient(MONGO_URI, {
+        serverSelectionTimeoutMS: 5000,
+        socketTimeoutMS: 45000,
+    });
     await client.connect();
     cachedClient = client;
     return client;
