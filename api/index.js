@@ -8,8 +8,6 @@ app.use(cors());
 app.use(express.json());
 
 const MONGO_URI = 'mongodb+srv://rashi:Rashi123@rashi.qn1zdi7.mongodb.net/?appName=rashi';
-let db;
-
 const client = new MongoClient(MONGO_URI);
 let db;
 
@@ -18,17 +16,8 @@ client.connect().then(() => {
     console.log('MongoDB connected');
 }).catch(err => console.error('MongoDB error:', err));
 
-// Route handlers
-app.get('/admin', (req, res) => {
-    res.sendFile(__dirname + '/../admin.html');
-});
-
-app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/../login.html');
-});
-
-// Auth API
-app.post('/api/login', async (req, res) => {
+// Auth API - must be before other routes
+app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
         const hashedPassword = require('crypto').createHash('sha256').update(password).digest('hex');
@@ -43,6 +32,15 @@ app.post('/api/login', async (req, res) => {
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
+});
+
+// Route handlers
+app.get('/admin', (req, res) => {
+    res.sendFile(__dirname + '/../admin.html');
+});
+
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/../login.html');
 });
 
 // Projects API
